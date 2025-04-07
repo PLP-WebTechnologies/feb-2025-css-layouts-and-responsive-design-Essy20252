@@ -1,0 +1,95 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    padding: 1rem;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+/* Layout for the Content */
+.content {
+    display: flex;
+    justify-content: space-between;  /* Space out the left and right sections */
+    align-items: flex-start;         /* Align items to the top */
+    padding: 20px;
+    width: 100%;
+}
+
+.left, .right {
+    flex: 1;                         /* Allow sections to grow and fill available space */
+    padding: 15px;
+    margin: 10px;
+    background-color: #f4f4f4;
+}
+
+.left {
+    background-color: #e0e0e0;
+}
+
+.right {
+    background-color: #d1c4e9;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    /* For Tablets */
+    .content {
+        flex-direction: column;      /* Stack sections vertically on tablet screens */
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul li {
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    /* For Mobile */
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .left, .right {
+        margin: 5px 0;
+        padding: 10px;
+    }
+}
+
+
